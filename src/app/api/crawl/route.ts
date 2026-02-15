@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { runCrawl } from "@/lib/crawler";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   const authHeader = request.headers.get("authorization");
   const expectedToken = process.env.CRON_SECRET;
