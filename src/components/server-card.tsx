@@ -29,9 +29,7 @@ function timeAgo(dateStr: string): string {
 export function ServerCard({ server }: ServerCardProps) {
   return (
     <a
-      href={server.githubUrl ?? "#"}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={`/servers/${server.id}`}
       className="block rounded-lg border border-zinc-200 p-4 transition-colors hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
     >
       <div className="flex items-start justify-between gap-4">
